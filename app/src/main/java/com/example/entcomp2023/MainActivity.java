@@ -8,6 +8,7 @@ import static java.lang.Math.sqrt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     }
 
     //
+    @SuppressLint("SetTextI18n")
     @Override
     public void onSensorChanged(SensorEvent event) {
         double[] g = convertFloatsToDoubles(event.values.clone());
